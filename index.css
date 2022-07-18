@@ -2,31 +2,85 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: "Raleway Medium", sans-serif;
+    --midgray: #242B37;
+    --nearblack: #15131F;
+    --darkgray: #191A27;
 }
+.box {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+}
+
 #header {
     width: 100%;
-    height: 10vh;
-    background-color: blue;
+    height: 30px;
+    line-height: 30px;
+    background-color: var(--midgray);
+    color: white;
+    text-align: center;
+    font-family: "Raleway Bold", sans-serif;
 }
 
 #mainContainer {
-    height: 70vh
+    height: calc(100vh - (30px + 130px));
 }
+
 #sidebar {
     display: inline-block;
     height: 100%;
-    width: 30%;
-    background-color: pink;
+    width: 20%;
+    background-color: var(--nearblack);
 }
 
 #main {
     display: inline-block;
     height: 100%;
-    width: 70%;
-    background-color: green;
+    width: 80%;
+    background-image: linear-gradient(#4DD6BD, var(--darkgray) 50%);
+}
+
+#aboutMe {
+    background-color: transparent;
+    height: calc((100vh - (130px + 30px)) / 2);
+    width: 80%;
+    padding: 0.5em;
+    position: absolute;
+}
+
+#descBox {
+    width: 80%;
+    height: 80%;
+    background-color: var(--nearblack);
+    color: white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display:flex;
+    flex-direction: row;
+    border-radius:8px;
+}
+
+
+#projects {
+    background-color: var(--nearblack);
+    height: calc((100vh - (130px + 30px)) / 2);
+    position: absolute;
+    width: 80%;
+    bottom: 130px;
+   
+   
+   
 }
 
 #footer {
-    background-color: red;
-    height: 30vh;
-}    
+    background-color: var(--midgray);
+    height: 129px;
+    border-top:1px gray solid;
+}
