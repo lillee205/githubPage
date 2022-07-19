@@ -25,7 +25,7 @@ body {
 }
 
 #mainContainer {
-    height: calc(100vh - (30px + 130px));
+    height: calc(100vh - (30px + 105px));
 }
 
 #sidebar {
@@ -44,7 +44,7 @@ body {
 
 #aboutMe {
     background-color: transparent;
-    height: calc((100vh - (130px + 30px)) / 2);
+    height: calc((100vh - (105px + 30px)) / 2);
     width: 80%;
     padding: 0.5em;
     position: absolute;
@@ -70,17 +70,37 @@ body {
 
 #projects {
     background-color: var(--nearblack);
-    height: calc((100vh - (130px + 30px)) / 2);
+    height: calc((100vh - (105px + 30px)) / 2);
     position: absolute;
     width: 80%;
-    bottom: 130px;
-   
-   
-   
+    padding: 0.6em 1.5em;
+    bottom: 105px;
+    box-shadow: 39px 0px 53px -3px rgba(0,0,0,0.24) inset;
+    -webkit-box-shadow: 39px 0px 53px -3px rgba(0,0,0,0.24) inset;
+    -moz-box-shadow: 39px 0px 53px -3px rgba(0,0,0,0.24) inset;
+}
+
+h2 {
+    margin-bottom: 0.2em;
+    color: white;
+}
+.flex {
+    display: flex;
+    flex-order: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+
+.proj {
+    background-color: green;
+    width: 15%;
+    height: 90%;
+    border-radius: 7px;
 }
 
 #footer {
     background-color: var(--midgray);
-    height: 129px;
+    height: 104px;
     border-top:1px gray solid;
 }
