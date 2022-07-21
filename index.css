@@ -2,16 +2,26 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: "Raleway Medium", sans-serif;
+    font-family: "Raleway", sans-serif;
     --midgray: #242B37;
     --nearblack: #15131F;
     --darkgray: #191A27;
+    --teal: #4DD6BD;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera */
+    background-image: linear-gradient(#4DD6BD, var(--darkgray) 40%);
 }
+
 .box {
--webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-
 }
 
 #header {
@@ -26,38 +36,80 @@ body {
 
 #mainContainer {
     height: calc(100vh - (30px + 105px));
+    display: grid;
+    grid-template-columns: repeat(6, minmax(130px,1fr));
+    grid-template-rows: repeat(2, minmax(230px, 1fr));
+    gap: 0;
 }
 
 #sidebar {
     display: inline-block;
     height: 100%;
-    width: 20%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-end: span 2;
     background-color: var(--nearblack);
+    color: white;
+    padding: 0.5em 2em;
 }
 
+#sidebar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#sidebar h3 {
+    margin-bottom: 1.5em;
+}
+
+#sidebar h3:hover {
+    cursor: pointer;
+}
+
+#sidebar hr{
+    width: 100%;
+}
+
+#sidebar p{
+    font-size: 0.8em;
+}
+
+#songs a{
+    color: lightgray;
+    font-size: 0.75em;
+    display: block;
+    margin-bottom: 0.4em;
+}
+
+#songs a:hover {
+    cursor: pointer;
+}
 #main {
     display: inline-block;
     height: 100%;
-    width: 80%;
-    background-image: linear-gradient(#4DD6BD, var(--darkgray) 50%);
+    
 }
 
 #aboutMe {
-    background-color: transparent;
+    
     height: calc((100vh - (105px + 30px)) / 2);
-    width: 80%;
+    
     padding: 0.5em;
-    position: absolute;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 #descBox {
     width: 80%;
-    height: 80%;
+    height: 90%;
     background-color: var(--nearblack);
     color: white;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    padding: 1em;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -65,14 +117,54 @@ body {
     display:flex;
     flex-direction: row;
     border-radius:8px;
+    align-items: center;
+}
+#descBox h1 {
+    margin-bottom:0;
 }
 
+#descBox p {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+#descBox img {
+    height: 20vh;
+    width: auto;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 8px;
+    
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75em;
+    margin-right: 0.7em;
+    background-color: transparent;
+    border: var(--teal) 3px solid;
+    border-radius: 40px;
+}
+
+#resume {
+    background-color: var(--teal);
+    color: black;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+#resume:hover {
+    background-color: var(--nearblack);
+    color: white;
+}
 
 #projects {
     background-color: var(--nearblack);
     height: calc((100vh - (105px + 30px)) / 2);
-    position: absolute;
-    width: 80%;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
     padding: 0.6em 1.5em;
     bottom: 105px;
     box-shadow: 39px 0px 53px -3px rgba(0,0,0,0.24) inset;
@@ -90,6 +182,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     height: 80%;
+    overflow-x: auto;
 }
 
 .proj {
@@ -97,10 +190,30 @@ h2 {
     width: 15%;
     height: 90%;
     border-radius: 7px;
+    min-width: 150px;
+    margin: 0 1em;
 }
 
 #footer {
     background-color: var(--midgray);
     height: 104px;
     border-top:1px gray solid;
+    position: relative;
+    z-index: 30;
+}
+
+#audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.spotify_ctrls {
+    color: white;
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+.spotify_ctrls:hover{
+    cursor: pointer;
 }
