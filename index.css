@@ -23,7 +23,9 @@ body {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
-
+h3 {
+    font-size: 17px;
+}
 #header {
     width: 100%;
     height: 30px;
@@ -100,7 +102,12 @@ body {
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
+.vertical-align {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 #descBox {
     width: 80%;
     height: 90%;
@@ -110,15 +117,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     display:flex;
     flex-direction: row;
     border-radius:8px;
     align-items: center;
 }
+
 #descBox h1 {
     margin-bottom:0;
 }
@@ -200,6 +204,30 @@ h2 {
     border-top:1px gray solid;
     position: relative;
     z-index: 30;
+}
+
+#songInfo {
+    position: absolute;
+    height: 74px;
+    width: 270px;
+    background-color: transparent;
+    padding: 15px;
+}
+
+#songInfo img{
+    width: 75px;
+}
+
+#songInfo h3{
+    color: white;
+    margin-top:0;
+    margin-bottom: 5px;
+}
+
+#songInfo p{
+    color: lightgray;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #audio {

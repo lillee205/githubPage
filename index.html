@@ -27,13 +27,13 @@
 	<p>Since this page is heavily inspired by Spotify, here are some
 	  tunes.</p>
 	<div id = "songs">
-	  <a>arrow ⋅ half-alive</a>
+	  <a style="text-decoration:underline;">arrow ⋅ half-alive</a>
 	  <a>Star, Dear Star ⋅ Ahn Ye Eun</a>
 	  <a>Under My Skin ⋅ Jukebox the Ghost</a>
 	</div>
       </div>
       <div id = "aboutMe" class = "box">
-	<div id = "descBox" class = "box">
+	<div id = "descBox" class = "box vertical-align">
 	  <div style="width:30%">
 	    <img src = "https://assets.epicurious.com/photos/576450dde047a6cf1ee8268c/1:1/w_2560%2Cc_limit/miso-soup.jpg">
 	  </div>
@@ -57,20 +57,27 @@
       </div>
     </div>
     <div id = "footer">
+      <div id = "songInfo">
+	<img id = "songImg" src = "assets/arr.jpeg">
+	<div style = "display: inline-block;padding-left:10px;" class = "vertical-align">
+	  <h3 id = "songTitle">arrow</h3>
+	  <p id = "songArtist">half-alive</p>
+	</div>
+      </div>
       <audio controls="controls" style="display:none;" id = "spotAudio">
-	<source src="/music/half-alive.mp3" type="audio/mpeg">
-	<source src="/music/half-alive.ogg" type="audio/ogg">
+	<source id = "mp3"  src="music/arr.mp3" type="audio/mpeg">
+	<source id = "ogg" src="music/arr.ogg" type="audio/ogg">
       </audio>
       <div id = "audio">
 	<div class = "spotify_ctrls">
-	  <i class="fa-solid fa-backward-step"></i>
+	  <i id = "prev" class="fa-solid fa-backward-step"></i>
 	</div>
 	<div class = "spotify_ctrls">
 	  <i id = "play" class="fa-solid fa-circle-play"></i>
 	  <i id = "pause" class="fa-solid fa-circle-pause" style ="display:none;"></i>
 	</div>
 	<div class = "spotify_ctrls">
-	  <i class="fa-solid fa-forward-step"></i>
+	  <i id = "next" class="fa-solid fa-forward-step"></i>
 	</div>
       </div>
     </div>			      
