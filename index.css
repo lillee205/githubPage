@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    min-width: 950px;
+    min-height: 600px;
     font-family: "Raleway", sans-serif;
-    --midgray: #242B37;
+    --midgray: #1C222C;
     --nearblack: #15131F;
     --darkgray: #191A27;
     --teal: #4DD6BD;
@@ -23,9 +25,18 @@ body {
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+.vertical-align {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 h3 {
     font-size: 17px;
 }
+
 #header {
     width: 100%;
     height: 30px;
@@ -55,16 +66,19 @@ h3 {
     padding: 0.5em 2em;
 }
 
+.links {
+    display: block;
+}
 #sidebar a{
     text-decoration: none;
     color: inherit;
 }
-
-#sidebar h3 {
-    margin-bottom: 1.5em;
+#sidebar i{
+    margin-right: 0.5em;
 }
-
-#sidebar h3:hover {
+#sidebar h3 {
+    margin-bottom: 1.3em;
+    display: inline-block;
     cursor: pointer;
 }
 
@@ -81,11 +95,9 @@ h3 {
     font-size: 0.75em;
     display: block;
     margin-bottom: 0.4em;
-}
-
-#songs a:hover {
     cursor: pointer;
 }
+
 #main {
     display: inline-block;
     height: 100%;
@@ -102,12 +114,7 @@ h3 {
     grid-row-start: 1;
     grid-row-end: 2;
 }
-.vertical-align {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+
 #descBox {
     width: 80%;
     height: 90%;
@@ -177,8 +184,18 @@ h3 {
 }
 
 h2 {
-    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
     color: white;
+    display: inline-block;
+}
+
+h4 {
+    display: inline-block;
+    color: gray;
+    margin-bottom:0;
+    float:right;
+    cursor: pointer;
 }
 .flex {
     display: flex;
@@ -190,12 +207,39 @@ h2 {
 }
 
 .proj {
-    background-color: green;
+    background-color: var(--darkgray);
     width: 15%;
-    height: 90%;
+    height: 85%;
     border-radius: 7px;
     min-width: 150px;
     margin: 0 1em;
+    padding: 0.7em;
+    cursor: pointer;
+}
+
+.thumbnail {
+    background-color: blue;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 7px;
+}
+
+.proj h3 {
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+
+.proj p {
+    margin-top: 0.2em;
+    font-size: 0.7em;
+    color: lightgray;
 }
 
 #footer {

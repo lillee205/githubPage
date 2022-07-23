@@ -15,13 +15,19 @@
     <div id = "header">Lilly Lee</div>
     <div id = "mainContainer">
       <div id = "sidebar">
-	<h3>Home</h3>
-	<a href= "https://github.com/lillee205">
-	  <h3>Github</h3>
-	</a>
-	<a href= "http://linkedin.com/in/lillee205">
-	   <h3>LinkedIn</h3>
-	</a>
+	<div class = "links">
+	  <i class="fa-solid fa-house"></i><h3>Home</h3>
+	</div>
+	<div class = "links">
+	  <a href= "https://github.com/lillee205">
+	    <i class="fa-brands fa-github"></i><h3>Github</h3>
+	  </a>
+	</div>
+	<div class = "links">
+	  <a href= "http://linkedin.com/in/lillee205">
+	    <i class="fa-brands fa-linkedin"></i><h3>LinkedIn</h3>
+	  </a>
+	</div>
 	<hr>
 	<h3 style="margin-bottom:0">Top Tracks</h3>
 	<p>Since this page is heavily inspired by Spotify, here are some
@@ -47,12 +53,35 @@
       </div>
       <div id = "projects" class = "box">
 	<h2>Projects</h2>
+	<h4><a style = "color:inherit; text-decoration:none;" href="https://github.com/lillee205">SEE ALL</a></h4>
 	<div class = "flex">
-	  <div class = "proj"></div>
-	  <div class = "proj"></div>
-	  <div class = "proj"></div>
-	  <div class = "proj"></div>
-	  <div class = "proj"></div>
+	  <div class = "proj" onclick="location.href='https://github.com/lillee205/githubPage';">
+	    <div class = "thumbnail" style = "background-image: url('assets/githubPage.png');"></div>
+	    <h3>github page</h3>
+	    <p>Code for the site that you're currently on!</p>
+	  </div>
+	  <div class = "proj" onclick="location.href='https://github.com/lillee205/codingwithwally';">
+	    <div class = "thumbnail" style = "background-image: url('assets/codingWithWally.png');"></div>
+	    <h3>coding with wally</h3>
+	    <p>A coding site akin to CodingBat specifically for Harvey Mudd's introductory CS course</p>
+	  </div>
+	  <div class = "proj" onclick="location.href='https://github.com/lillee205/Puffle-Roundup';">
+	    <div class = "thumbnail" style = "background-image: url('assets/puffleRoundup.png');"></div>
+	    <h3>puffle roundup</h3>
+	    <p>A VPython rendition of Club Penguin's Puffle Roundup game.</p>
+	  </div>
+	  <div class = "proj" onclick="location.href='https://www.youtube.com/watch?v=RXJaR72ju3g';">
+	    <div class = "thumbnail" style = "background-image: url('assets/weSearch.png');"></div>
+	    <h3>weSearch</h3>
+	    <p>A webapp for efficient organization and communication when
+	    forming search parties.</p>
+	  </div>
+	  <div class = "proj" onclick="location.href='https://github.com/lillee205/coloringBook';">
+	    <div class = "thumbnail" style = "background-image: url('assets/coloringBook.png');"></div>
+	    <h3>coloringBook</h3>
+	    <p>Uses Pillow to detect outlines of a coloring page and fills them
+	    in with color.</p>
+	  </div>
 	</div>
       </div>
     </div>
