@@ -246,7 +246,9 @@ h4 {
     background-color: var(--midgray);
     height: 104px;
     border-top:1px gray solid;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     z-index: 30;
 }
 
